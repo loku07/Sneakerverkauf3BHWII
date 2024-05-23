@@ -16,9 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        SchuhRepository repo = new SchuhRepository();
-        List<Schuh> meineSchuhe = repo.GetAllSchuhe();
-        return View(meineSchuhe);
+        return View();
     }
 
     public IActionResult Privacy()

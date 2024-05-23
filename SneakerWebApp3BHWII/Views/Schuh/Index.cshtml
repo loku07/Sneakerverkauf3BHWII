@@ -1,0 +1,41 @@
+﻿@model List<Schuh>
+
+@{
+    ViewData["Title"] = "Schuh Übersicht";
+}
+
+<h1>Derzeitiger Schuhstock</h1>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Sku</th>
+        <th>Bezeichnung</th>
+        <th>Groesse</th>
+        <th>Preis</th>
+        <th>Modell_id</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    @{
+
+        foreach (var schuhe in Model)
+        {
+    
+            <tr>
+                <td>@(schuhe.sku)</td>
+                <td>@(schuhe.bezeichnung)</td>
+                <td>@(schuhe.groesse)</td>
+                <td>@(schuhe.preis)</td>
+                <td>@(schuhe.modell_id)</td>
+            </tr>
+        }    
+    
+    }
+
+
+    </tbody>
+</table>
