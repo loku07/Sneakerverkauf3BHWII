@@ -14,4 +14,10 @@ public class SchuhController : Controller
         
         return View(meineSchuhe);
     }
+
+    public IActionResult Neu()
+    {
+        
+        return View(meineSchuhe);
+    }
 }
